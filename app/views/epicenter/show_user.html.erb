@@ -1,0 +1,14 @@
+<h1>@<%= @user.username %>'s Profile & Tweets</h1>
+
+<p><%= @user.name %></p>
+<p><%= @user.location %></p>
+<p><%= @user.bio %></p>
+
+<% @user.tweets.each do |tweet| %>
+ 
+  <div class="well">
+    <p><%= tweet.user.username %></p>
+    <p><%= tweet.message %></p>
+  </div>
+
+<% end %>

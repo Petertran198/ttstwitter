@@ -1,0 +1,9 @@
+<h1><%= current_user.username %>'s Twitter Feed</h1>
+
+<% @following_tweets.each do |tweet| %>
+  <div class="well">
+    <p>@<%= link_to tweet.user.username, show_user_path(id: tweet.user_id)%>
+    </p>
+    <p><%= tweet.message.html_safe %></p>
+  </div>
+<% end %>
