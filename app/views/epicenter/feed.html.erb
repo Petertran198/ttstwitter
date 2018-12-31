@@ -1,9 +1,14 @@
-<h1><%= current_user.username %>'s Twitter Feed</h1>
+<% if current_user !=nil %>
+  <h1><%= current_user.username %>'s Twitter Feed</h1>
 
-<% @following_tweets.each do |tweet| %>
-  <div class="well">
-    <p>@<%= link_to tweet.user.username, show_user_path(id: tweet.user_id)%>
-    </p>
-    <p><%= tweet.message.html_safe %></p>
-  </div>
+  <% @following_tweets.each do |tweet| %>
+    <div class="well">
+      <p>@<%= link_to tweet.user.username, show_user_path(id: tweet.user_id)%>
+      </p>
+      <p><%= tweet.message.html_safe %></p>
+    </div>
+  <% end %>
+  
+  <!-- put an else statement and create a landing page or something so if there is not current user it will tell them to sign up -->
+
 <% end %>
