@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :tweets
   devise_for :users
   root "epicenter#feed"
+  get "tag_tweets" => "epicenter#tag_tweets"
+
 end

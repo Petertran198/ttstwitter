@@ -1,0 +1,12 @@
+<!-- This is for showing the details for the given tag and specifically the details about the hashtags --> 
+
+<h1><%= @tag.phrase %></h1>
+
+<% @tag.tweets.each do |tweet| %>
+    <div class="well">
+      <p><%= tweet.user.name %></p>
+      <p><%= tweet.message.html_safe %></p>
+    </div>
+
+
+<% end %>
