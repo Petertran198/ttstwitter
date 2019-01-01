@@ -2,7 +2,7 @@
 
 <h1><%= @tag.phrase %></h1>
 
-<% @tag.tweets.each do |tweet| %>
+<% @tag.tweets.order(created_at: :desc).each do |tweet| %>
     <div class="well">
       <p><%= tweet.user.name %></p>
       <p><%= tweet.message.html_safe %></p>

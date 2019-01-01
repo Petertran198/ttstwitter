@@ -1,3 +1,5 @@
+
+## Resposible for taking our tweet and looking for any hashtags in the database 
 module TweetsHelper
   def get_tagged(tweet)
     message_arr = tweet.message.split
