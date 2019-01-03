@@ -50,6 +50,9 @@ class EpicenterController < ApplicationController
     end
   end
 
+  def all_users
+    
+  end
 
 
 

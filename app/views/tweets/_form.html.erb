@@ -11,16 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :message %>
-    <%= form.text_field :message %>
+   <textarea class="form-control" rows="12"><%= form.text_field :message%></textarea>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.hidden_field :user_id, value: current_user.id%>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
