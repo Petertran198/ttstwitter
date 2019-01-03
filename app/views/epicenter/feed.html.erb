@@ -6,6 +6,8 @@
       <p>@<%= link_to tweet.user.username, show_user_path(id: tweet.user_id)%>
       </p>
       <p><%= tweet.message.html_safe %></p>
+      <p><%= time_ago_in_words(tweet.created_at) if Time.now - tweet.created_at < 86400 %></p>
+      <p><%= tweet.created_at.strftime('%b %e')   if Time.now - tweet.created_at >= 86400 %></p>
     </div>
   <% end %>
   
