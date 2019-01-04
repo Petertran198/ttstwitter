@@ -11,13 +11,21 @@ body {
   background-size: cover;
 }
 
+/* THIS IS FOR THE LOGIN PG */
 .width-50 {
   width: 50%;
 }
 
 
 
-/* THis is for the Sign Up Page */
+
+/* THIS IS FOR THE ALL USER PAGE */
+  .user-list-bg{
+  background-color: white;
+  }
+
+
+/* This is for the Sign Up Page */
 
 .card-signin {
   border: 0;
@@ -42,3 +50,46 @@ body {
 .card-signin .card-body {
   padding: 2rem;
 }
+
+
+
+
+
+
+/* Forget ur password page */
+
+login-pg > .card{
+    width: 70%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    padding-bottom: 10px
+  }
+
+  .login-pg .login-font{
+    color: black; 
+    padding-top: 5px;
+  }
+   .login-pg .field .login-font {
+    color: #212121; 
+  }
+
+  .login-pg .login-text-field{
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .login-font a {
+    color: black;
+
+  }
+  
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: .8;
+
+  }
+

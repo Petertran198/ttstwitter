@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Petertran198/tran_view_tool
+  revision: f95bf608e76f2990e7d7e6d7097436af9a861952
+  specs:
+    tran_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -247,6 +253,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  tran_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

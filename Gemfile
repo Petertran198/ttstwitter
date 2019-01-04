@@ -60,7 +60,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'tran_view_tool', git: 'https://github.com/Petertran198/tran_view_tool'
 gem 'devise'
 gem 'carrierwave'
 gem 'bootstrap-sass'
