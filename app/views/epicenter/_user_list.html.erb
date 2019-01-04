@@ -1,18 +1,25 @@
-<% @users.each do |user| %>
-  <% if current_user != nil %>
-    <div class="well">
-      <%= link_to show_user_path(id: user.id) do %>
-      <p><%= user.username %> - <%= user.name %></p>
-      <% end %>
-      <p><%= user.bio %></p>
-      <% if current_user.following.include?(user.id) %>
-      <%= link_to 'Following', unfollow_path(id: user.id), class: "btn btn-primary unfollow_btn" %>
-      <% elsif current_user.id != user.id %>
-      <%= link_to 'Follow', now_following_path(id: user.id), class: "btn btn-primary"%>
-      <% end %>  
+<% if current_user != nil %>
+  <% @users.each do |user| %>
 
-  <%end%>
+      <div class="well">
+        <%= link_to show_user_path(id: user.id) do %>
+        <p><%= user.username %> - <%= user.name %></p>
+        <% end %>
+        <p><%= user.bio %></p>
+        <% if current_user.following.include?(user.id) %>
+        <%= link_to 'Following', unfollow_path(id: user.id), class: "btn btn-primary unfollow_btn" %>
+        <% elsif current_user.id != user.id %>
+        <%= link_to 'Follow', now_following_path(id: user.id), class: "btn btn-primary"%>
+        <% end %>  
+      </div>
 
-    </div>
+  <% end%>
+  <% elsif current_user ==nil%>
+  <div class="well">
+    <h3>Please log in before you can see all the users.</h3>
+  </div>
 
-<% end%>
+
+
+
+<%end%>
