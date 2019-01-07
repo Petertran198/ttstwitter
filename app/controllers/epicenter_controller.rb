@@ -47,10 +47,13 @@ class EpicenterController < ApplicationController
     User.all.each do |user|
       if @user.following.include?(user.id)
         @users.push(user)
+      end
     end
   end
 
-
+  def my_profile
+    @profile = current_user
+  end
 
 
 
@@ -61,9 +64,8 @@ class EpicenterController < ApplicationController
     User.all.each do |user|
       if user.following.include?(@user.id)
         @users.push(user)
-        end
-     end 
+      end
+    end 
   end
-end
 
 end

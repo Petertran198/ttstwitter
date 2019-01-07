@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root "epicenter#feed"
   get "tag_tweets" => "epicenter#tag_tweets"
   get 'all_users' => 'epicenter#all_users'
-  
+  get 'profile' => 'epicenter#my_profile'
   get 'following' => 'epicenter#following'
   get 'followers' => 'epicenter#followers'
   

@@ -19,6 +19,11 @@
                 <%= f.text_field :name , class: 'form-control'%>
               </div>
 
+              <div class="form-group">
+                <%= f.label :avatar %><br>
+                <%= f.file_field :avatar %>
+              </div>
+          
 
               <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                 <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
