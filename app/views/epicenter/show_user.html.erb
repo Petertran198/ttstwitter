@@ -4,6 +4,20 @@
 <p><%= @user.location %></p>
 <p><%= @user.bio %></p>
 
+<div>
+  <%if @location.blank? == false%>
+    <div class="well">
+      Temperature: <%= @temp %> <br>
+      Description: <%= @weather_words %> <br>
+
+    </div>
+  <%end %>
+
+</div>
+
+
+
+
 <p><%= link_to "Following", following_path(id: @user.id) %> |
 <%= link_to "Followers", followers_path(id: @user.id) %> </p>
 
